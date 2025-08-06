@@ -1,0 +1,272 @@
+/* Cart Page Styles */
+.cart {
+  min-height: calc(100vh - 70px);
+  background: #f8fafc;
+  padding: 40px 0;
+}
+
+.cart-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cart-header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.cart-header p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+/* Empty Cart */
+.empty-cart {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.empty-cart-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.empty-cart h2 {
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.empty-cart p {
+  color: #718096;
+  margin-bottom: 30px;
+}
+
+/* Cart Content */
+.cart-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Cart Items */
+.cart-items {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.item-artwork {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+
+.item-artwork img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.artwork-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.item-details {
+  min-width: 0;
+}
+
+.item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-artist {
+  color: #718096;
+  margin-bottom: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-album {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.85rem;
+}
+
+.item-genre {
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.item-duration {
+  color: #718096;
+}
+
+.item-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #38a169;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #e53e3e;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+/* Cart Summary */
+.cart-summary {
+  position: sticky;
+  top: 20px;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.summary-card h2 {
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.summary-details {
+  margin-bottom: 30px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row.total {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  border-top: 2px solid #e2e8f0;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.payment-info {
+  text-align: center;
+}
+
+.payment-info p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cart-item {
+    grid-template-columns: 60px 1fr auto;
+    gap: 15px;
+  }
+
+  .item-artwork {
+    width: 60px;
+    height: 60px;
+  }
+
+  .item-actions {
+    grid-column: 1 / -1;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .item-price {
+    font-size: 1.1rem;
+  }
+}

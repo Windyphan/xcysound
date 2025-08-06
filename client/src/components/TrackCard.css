@@ -1,0 +1,234 @@
+/* TrackCard Component Styles - Fixed Version */
+.track-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid #333333;
+  height: 100%; /* Fixed: Ensure all cards have same height */
+  display: flex;
+  flex-direction: column; /* Fixed: Stack elements properly */
+}
+
+.track-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.4);
+  border-color: #ff1493;
+}
+
+.track-artwork {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+  flex-shrink: 0; /* Fixed: Prevent artwork from shrinking */
+}
+
+.track-artwork img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.artwork-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  opacity: 0.9;
+  position: absolute; /* Fixed: Make placeholder overlay properly */
+  top: 0;
+  left: 0;
+}
+
+.track-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; /* Fixed: Ensure overlay is on top */
+}
+
+.track-card:hover .track-overlay {
+  opacity: 1;
+}
+
+.play-btn {
+  background: rgba(255, 20, 147, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding-left: 3px; /* Fixed: Center play icon properly */
+}
+
+.play-btn:hover {
+  background: #ff1493;
+  transform: scale(1.1);
+}
+
+.track-info {
+  padding: 20px;
+  background: #1a1a1a;
+  flex: 1; /* Fixed: Make info section fill remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.track-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px; /* Fixed: Better spacing */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.3; /* Fixed: Better line height */
+}
+
+.track-artist {
+  color: #ff69b4;
+  margin-bottom: 8px; /* Fixed: Better spacing */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1rem; /* Fixed: Consistent font size */
+  font-weight: 500;
+}
+
+.track-album {
+  color: #cccccc;
+  font-size: 0.9rem;
+  margin-bottom: 12px; /* Fixed: Better spacing */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.track-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  gap: 10px; /* Fixed: Add gap between elements */
+}
+
+.track-genre {
+  background: #333333;
+  color: #ff69b4;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: 1px solid #ff1493;
+  white-space: nowrap; /* Fixed: Prevent wrapping */
+}
+
+.track-duration {
+  color: #cccccc;
+  font-weight: 500;
+  white-space: nowrap; /* Fixed: Prevent wrapping */
+}
+
+.track-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 12px; /* Fixed: Add gap between elements */
+}
+
+.track-price {
+  font-size: 1.2rem; /* Fixed: Slightly larger price */
+  font-weight: 700; /* Fixed: Bolder weight */
+  color: #ff1493;
+  white-space: nowrap;
+}
+
+.btn-cart {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Fixed: Gap between icon and text */
+  white-space: nowrap;
+  min-width: 120px; /* Fixed: Consistent button width */
+  justify-content: center;
+}
+
+.btn-cart.in-cart {
+  background: #ff69b4;
+}
+
+.btn-cart:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.track-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #888888;
+  padding-top: 12px; /* Fixed: Better spacing */
+  border-top: 1px solid #333333;
+  margin-top: auto; /* Fixed: Push stats to bottom */
+}
+
+.track-stats span {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Fixed: Gap between emoji and number */
+}
+
+/* Responsive Design - Improved */
+@media (max-width: 768px) {
+  .track-card {
+    max-width: 100%;
+  }
+
+  .track-artwork {
+    height: 180px;
+  }
+
+  .track-info {
+    padding: 15px;
+  }
+
+  .track-actions {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .track-price {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .btn-cart {
+    width: 100%;
+    min-width: unset;
+  }
+}
