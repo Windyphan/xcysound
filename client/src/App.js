@@ -15,6 +15,7 @@ import Checkout from './pages/Checkout';
 import Library from './pages/Library';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import TrackUpload from './pages/admin/TrackUpload';
+import TrackCardDemo from './pages/TrackCardDemo';
 import MusicPlayer from './components/MusicPlayer';
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminRoute from './components/AdminRoute';
@@ -62,6 +63,7 @@ function App() {
                   <TrackUpload />
                 </AdminRoute>
               } />
+              <Route path="/track-card-demo" element={<TrackCardDemo />} />
             </Routes>
           </main>
           <Footer />

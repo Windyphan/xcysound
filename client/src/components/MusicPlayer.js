@@ -153,19 +153,19 @@ const MusicPlayer = () => {
 
       <div className="player-content">
         {/* Track Info */}
-        <div className="track-info">
-          <div className="track-artwork">
+        <div className="player-track-info">
+          <div className="player-track-artwork">
             {currentTrack.artwork ? (
               <img src={`/uploads/artwork/${currentTrack.artwork}`} alt={currentTrack.title} />
             ) : (
-              <div className="artwork-placeholder">🎵</div>
+              <div className="player-artwork-placeholder">🎵</div>
             )}
           </div>
-          <div className="track-details">
-            <div className="track-title">{currentTrack.title}</div>
-            <div className="track-artist">{currentTrack.artist}</div>
+          <div className="player-track-details">
+            <div className="player-track-title">{currentTrack.title}</div>
+            <div className="player-track-artist">{currentTrack.artist}</div>
             {isPreviewMode && (
-              <div className="preview-badge">Preview Mode</div>
+              <div className="player-preview-badge">Preview Mode</div>
             )}
           </div>
         </div>
